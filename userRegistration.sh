@@ -35,7 +35,7 @@ else
         echo Invalid
 fi
 read -p "Enter password : " password
-passwordPattern="^.{8,}$"
+passwordPattern="^(.*[[:upper:]].*).{8}$"
 if [[ $password =~ $passwordPattern ]]
 then
         echo Valid
