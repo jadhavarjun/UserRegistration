@@ -1,3 +1,4 @@
+
 #!/bin/bash -x
 
 echo "WELCOME TO USER REGISTRATION"
@@ -35,7 +36,7 @@ else
         echo Invalid
 fi
 read -p "Enter password : " password
-passwordPattern="^(.*[[:upper:]].*).{8}([0-9]{1})$"
+passwordPattern="^(.*[[:upper:]].*)([a-z])(?=.*?[0-9])(?=.*?[#@$?]).{8,}$"
 if [[ $password =~ $passwordPattern ]]
 then
         echo Valid
